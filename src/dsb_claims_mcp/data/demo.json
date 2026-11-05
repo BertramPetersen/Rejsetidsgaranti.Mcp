@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "tickets": [
+    {
+      "id": "demo-ticket-1",
+      "ticket_reference": "DEMO-NOT-A-REAL-TICKET-001",
+      "product": "single",
+      "purchase_channel": "dsb_app",
+      "journey_ids": ["demo-journey-1"],
+      "synthetic": true
+    },
+    {
+      "id": "demo-ticket-unassigned",
+      "ticket_reference": "DEMO-NOT-A-REAL-TICKET-002",
+      "product": "other",
+      "purchase_channel": "unknown",
+      "journey_ids": [],
+      "synthetic": true
+    }
+  ],
+  "journeys": [
+    {
+      "id": "demo-journey-1",
+      "ticket_id": "demo-ticket-1",
+      "origin": "København H",
+      "destination": "Odense",
+      "train_number": "DEMO-TRAIN-001",
+      "scheduled_departure": "2026-10-01T10:00:00+02:00",
+      "scheduled_arrival": "2026-10-01T11:30:00+02:00",
+      "service": "dsb_mainline",
+      "passenger_confirmed": true,
+      "synthetic": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "demo-evidence-1",
+      "journey_id": "demo-journey-1",
+      "kind": "demo",
+      "actual_arrival": "2026-10-01T12:15:00+02:00",
+      "captured_at": "2026-10-01T12:20:00+02:00",
+      "source_label": "Synthetic demonstration only",
+      "source_url": null
+    }
+  ]
+}
